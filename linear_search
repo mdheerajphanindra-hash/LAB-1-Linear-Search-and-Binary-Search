@@ -20,13 +20,16 @@ int main() {
     int n;
     printf("Enter number of numbers in an array=");
     scanf("%d",&n);
+    
+    int array[n];
+    for(int i=0;i<n;i++){
+        printf("Enter the value in array of index %d=",i);
+        scanf("%d",&array[i]);
+    }
+
     int key;
     printf("Enter the key=");
     scanf("%d",&key);
-    int array[n];
-    for(int i=0;i<n;i++){
-        scanf("%d",&array[i]);
-    }
     linearSearch(array,n,key);
     return 0;
 }
